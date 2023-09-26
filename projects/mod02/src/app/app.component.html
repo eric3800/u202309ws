@@ -1,7 +1,23 @@
-<div style="text-align: center;">
-<h1>
-  Welcom to {{title}}
-</h1>
-</div>
+<style>
+  ul li {
+    display: inline;
+  }
+  ul li a{
+    padding: 0 5px
+  }
+</style>
 
-<page1></page1>
+<div style="text-align: center;">
+  <h1>
+    Welcom to {{title}}
+  </h1>
+  <ul>
+    <li *ngFor="let r of routeList">
+      <a [routerLink]="[r.path]">{{r.data?.[0]}} </a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+
+<!-- <page1></page1>
+<page2></page2> -->
