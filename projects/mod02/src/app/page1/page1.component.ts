@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 export class Page1Component {
   member = ["Jenny", "Vivid", "Kity", "Linda"];
   // member:any=[];
+
+getName(idx:number):string{
+  if(idx<0 || idx>this.member.length)
+    return "索引超出範圍";
+  return this.member[idx];
+
+}
+
 }
