@@ -1,0 +1,17 @@
+<p>check-stock works!</p>
+
+<style>
+    .cLower{color:red;}
+</style>
+
+<!-- <span [ngClass]="{cLower:lower}">
+    {{info}}
+    <button (click)="GetStock()">檢查庫存是否足夠</button>
+</span> -->
+
+<span [ngClass]="{cLower:lower}">
+    <ng-content select=".lowerAB" *ngIf="lower; else enough"></ng-content>
+    <ng-template #enough>
+        <ng-content select=".enoughCD"></ng-content>
+    </ng-template>
+</span>
