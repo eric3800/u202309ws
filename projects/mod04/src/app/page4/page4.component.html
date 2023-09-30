@@ -1,0 +1,27 @@
+<p>page4 works!</p>
+
+<button (click)="SayHi()">say Hi</button>
+<button on-click="SayHi()">say Hi</button>
+<div (click)="onClick('div')">
+    <button (click)="onClick('button')">Btn</button>
+</div>
+<div (click)="onClick2($event,'div')">
+    <h3>$event</h3>
+    <button (click)="onClick2($event,'button')">Btn 2</button>
+</div>
+<hr/>
+
+<div (click)="onClick3($event,'div')">
+<h3>$event methods</h3>
+<a (click)="onClick3($event,'a')" href="https://www.google.com">Google</a>
+</div>
+<hr/>
+
+<div>
+    你選的是 :{{result}}
+    <select (click)="onChang($event)">
+        <option value="0101">Java</option>
+        <option value="0102">Type Script</option>
+        <option value="0103">Angular</option>
+    </select>
+</div>

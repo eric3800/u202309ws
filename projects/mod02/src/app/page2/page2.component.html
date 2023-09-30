@@ -1,1 +1,19 @@
 <p>page2 works!</p>
+
+<div>
+    ID:{{pic.PictureID}}
+    Subject:{{pic.Subject}}
+    Author:{{pic.Author}}
+    <br/>
+    <img src="{{pic.Url}}" height="200">
+    <br/>
+</div>
+
+<div *ngFor="let pic of pics">
+    ID:{{pic.PictureID}}
+    Subject:{{pic.Subject}}
+    Author:{{pic.Author}}
+    <br/>
+    <img src="{{pic.Url}}" height="200">
+    <br/>
+</div>

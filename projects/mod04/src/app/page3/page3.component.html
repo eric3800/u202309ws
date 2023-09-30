@@ -1,0 +1,15 @@
+<p>page3 works!</p>
+
+<style>
+    .big {font-weight: bold; font-size: x-large;}
+    .small {font-weight: normal; font-size: x-small; background-color: yellow;}
+    .blue {color: blue;}
+    .green {color: green;}
+</style>
+
+<div class="big blue">Hello</div>
+<div [class]="classes">Hello 1</div>
+<div [class.small]="true">Hello 2</div>
+
+<div [ngClass]="classes">Hello 3</div>
+<div [ngClass]="{'big':true, 'green':true}">Hello 4</div>
